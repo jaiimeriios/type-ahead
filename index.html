@@ -9,10 +9,20 @@
 </head>
 
 <body>
+    <div class="container">
+        <button id="open-search-form">Open Search</button>
+
+
+        <p></p>
+
+        <p><a href="https://raw.githubusercontent.com/jaiimeriios/type-ahead/main/data.json" target="_blank">Json file</a></p>
+    </div>
 
     <form class="search-form">
-        <input type="text" class="search" id="search-input" placeholder="City or State">
-        <ul class="suggestions" id="show-suggestions"></ul>
+        <input type="text" class="search" id="search-input" placeholder="Search">
+        <div class="results-container">
+            <ul class="suggestions" id="show-suggestions"></ul>
+        </div>
     </form>
 
     <script src="script.js"></script>

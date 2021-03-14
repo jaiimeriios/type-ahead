@@ -12,11 +12,6 @@ fetch(endpoint).then((dataResponse) => {
     });
 });
 
-// add commas to numbers
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-}
-
 // filter words from input
 function findMatches(wordToMatch, getData) {
     return getData.filter((data) => {
@@ -35,7 +30,7 @@ function displayMatches() {
         const title = place.title.replace(regexWord, `<span class="hl">${this.value}</span>`);
         const description = place.description.replace(regexWord, `<span class="hl">${this.value}</span>`);
 
-        return `<li> <span class='name'>${title}, ${description}</span> </li>`;
+        return `<li><h6>${title}</h6> <p>${description}</li>`;
 
     }).join(''); // from array to string
 
@@ -46,3 +41,11 @@ function displayMatches() {
     }
 }
 
+
+// toogle form
+const button = document.querySelector('#open-search-form')
+const searchForm = document.querySelector('.search-form')
+
+button.addEventListener('click', () => {
+    searchForm.classList.toggle('is-open')
+})
