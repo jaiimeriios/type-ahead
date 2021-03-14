@@ -1,4 +1,4 @@
-const endpoint = 'http://127.0.0.1:5500/data.json'
+const endpoint = 'https://raw.githubusercontent.com/jaiimeriios/type-ahead/main/data.json'
 const getData = [];
 const searchInput = document.querySelector('#search-input');
 const searchList = document.querySelector('#show-suggestions');
