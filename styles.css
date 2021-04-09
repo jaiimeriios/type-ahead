@@ -20,20 +20,21 @@ body {
 
 .search-form {
     position: absolute;
-    top: 0;
-    right: -120%;
     width: 380px;
-    margin: 0 auto;
-    padding: 16px 0;
     height: 100vh;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 16px 0;
     z-index: 999999;
     background: #5f6a79;
     box-shadow: 0 0 6px 8px rgba(0, 0, 0, 0.35);
-    transition: right 300ms ease-out;
+    transition: transform 300ms ease-out;
+    transform: translateX(100%);
 }
 
 .search-form.is-open {
-    right: 0;
+    transform: translateX(0);
 }
 
 .search-form input.search {
@@ -105,13 +106,14 @@ body {
 /* contaner */
 
 .container {
-    background-color: red;
+    background-color: #989fab;
     width: 90%;
     max-width: 960px;
     margin: 0 auto;
+    padding: 50px 30px;
 }
 
 
 .container button {
-
+    outline: none;
 }
